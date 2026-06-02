@@ -1,1 +1,52 @@
+/* 自定义全局样式 */
 
+/* 调整正文行高 */
+body {
+  line-height: 1.6;
+}
+
+/* 自定义链接颜色 */
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover {
+  color: #b31b1b;
+  text-decoration: underline;
+}
+
+/* 论文列表页样式（与 publications.md 中的 HTML 配合） */
+.publication-item {
+  margin-bottom: 1.8rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+.pub-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+.pub-authors {
+  font-style: italic;
+  color: #495057;
+  margin-bottom: 0.25rem;
+}
+.pub-venue {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+.pub-links a {
+  margin-right: 1rem;
+  font-size: 0.85rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .pub-title {
+    font-size: 1rem;
+  }
+  .pub-authors, .pub-venue {
+    font-size: 0.85rem;
+  }
+}
