@@ -14,13 +14,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 庹忠曜 | 具身智能探索者
-email: zhongyao.tuo@shanghaitech.edu.cn
+email: b21041426@njupt.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
   南京邮电大学优秀毕业生，以专业第一名保研至上海科技大学信息学院，
   专注具身智能、嵌入式系统与机器人自主导航的交叉研究。
-  累计发表学术论文7篇（一作2篇），获第九届中国"互联网+"大学生创新创业大赛全国金奖等国家级奖项3项。
-twitter_username: username
-github_username: ZhongyaoTuo
+  累计参与发表学术论文8篇（一作2篇），申请专利1项，
+  获第九届中国"互联网+"大学生创新创业大赛全国金奖等国家级奖项4项。
+twitter_username: 
+github_username: 
 minimal_mistakes_skin: default
 search: true
 
@@ -57,13 +58,13 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-# 在 author 区块修改 bio 字段
 author:
-  name: "庹忠曜 (Tuo Zhongyao)"
+  name: "庹忠曜<br>Zhongyao Tuo"          # 使用 <br> 换行
   avatar: "/assets/images/avatar.jpg"
-  bio: "中共党员，南京邮电大学智能科学与技术专业本科，专业排名1/62。保研至上海科技大学。累计参与发表论文8篇（一作2篇），申请专利1项。获互联网+全国金奖等国家级奖项3项、省部级3项、校级荣誉17项。"
+  bio: "中共党员，南京邮电大学智能科学与技术专业本科，专业排名1/62。保研至上海科技大学。累计参与发表论文8篇（一作2篇），申请专利1项。获互联网+全国金奖等国家级奖项4项、省部级6项、校级荣誉17项。"
   location: "中国 南京 / 上海"
-  github: "ZhongyaoTuo"
+  email: "b21041426@njupt.edu.cn"
+  # github 字段已删除，避免重复
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -113,3 +114,7 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# 自定义头文件（加载自定义 CSS）
+head_scripts:
+  - /assets/css/custom.css
