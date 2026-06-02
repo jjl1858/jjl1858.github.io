@@ -1,6 +1,7 @@
 <div class="author__avatar" style="text-align: center;">
   {% if site.author.avatar %}
-    <img src="{{ site.author.avatar | relative_url }}" alt="Avatar" style="display: inline-block; border-radius: 30% / 50%; object-fit: cover;">
+    <img src="{{ site.author.avatar | relative_url }}" alt="Avatar" 
+         style="display: inline-block; border-radius: 30% / 50%; width: 120px; height: auto; max-width: 100%; object-fit: cover;">
   {% endif %}
 </div>
 
@@ -25,8 +26,11 @@
     <!-- 邮箱已删除 -->
     {% for link in site.author.links %}
       <li style="margin-bottom: 0.75rem;">
-        <i class="{{ link.icon | default: 'fas fa-link' }}"></i>
-        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"
+           style="display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="{{ link.icon | default: 'fas fa-link' }}"></i>
+          {{ link.label }}
+        </a>
       </li>
     {% endfor %}
   </ul>
