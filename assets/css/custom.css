@@ -1,52 +1,68 @@
-/* 自定义全局样式 */
+/* ================================
+   1. 左侧侧边栏（个人信息区）样式调整
+   让内容区域更舒展，间距更大
+================================ */
 
-/* 调整正文行高 */
-body {
-  line-height: 1.6;
-}
-
-/* 自定义链接颜色 */
-a {
-  color: #0366d6;
-  text-decoration: none;
-}
-a:hover {
-  color: #b31b1b;
-  text-decoration: underline;
+/* 作者姓名与头衔之间的间距 */
+.author__content .author__name {
+  margin-bottom: 0.5rem;      /* 姓名下方增加间距 */
 }
 
-/* 论文列表页样式（与 publications.md 中的 HTML 配合） */
-.publication-item {
-  margin-bottom: 1.8rem;
-  border-bottom: 1px solid #e9ecef;
-  padding-bottom: 1rem;
+.author__content .author__bio {
+  margin: 0.75rem 0;          /* 个人简介上下间距加大 */
+  line-height: 1.5;           /* 行高增加，更易阅读 */
 }
-.pub-title {
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+
+/* 社交链接区块 */
+.author__urls-wrapper {
+  margin-top: 1rem;           /* 链接区上方增加间距 */
 }
-.pub-authors {
-  font-style: italic;
-  color: #495057;
-  margin-bottom: 0.25rem;
+
+/* 每个社交链接项之间的垂直间距 */
+.author__urls.social-icons li {
+  margin-bottom: 0.75rem;     /* 链接之间拉大距离 */
 }
-.pub-venue {
-  color: #6c757d;
-  font-size: 0.9rem;
-  margin-bottom: 0.25rem;
+
+/* 链接图标和文字对齐，整体更舒展 */
+.author__urls.social-icons li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;                /* 图标与文字间距加大 */
+  padding: 0.25rem 0;         /* 上下增加点击区域 */
 }
-.pub-links a {
-  margin-right: 1rem;
+
+/* ================================
+   2. 右侧正文区域字体调小
+   “滑动字帖” → 即右侧滚动内容区域的字体
+================================ */
+
+/* 正文页面主要内容区 */
+.page__content {
+  font-size: 0.9rem;          /* 原主题默认约1rem，调小一点 */
+}
+
+/* 文章标题（如论文、项目标题）可以保持稍微突出 */
+.page__content h2,
+.page__content h3 {
+  font-size: 1.15rem;         /* 二级/三级标题适当缩小，但比正文大 */
+}
+
+/* 论文列表里的标题可以稍微调小（如果需要） */
+.publication-item .pub-title {
+  font-size: 1rem;            /* 之前1.1rem，略微缩小 */
+}
+
+/* 对于代码块或引用等也可一并缩小，保持协调 */
+pre,
+code,
+blockquote {
   font-size: 0.85rem;
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
-  .pub-title {
-    font-size: 1rem;
-  }
-  .pub-authors, .pub-venue {
-    font-size: 0.85rem;
-  }
+/* ================================
+   3. 可选：让整个左侧栏区块内边距更大
+   增加侧边栏内部留白，视觉上更舒展
+================================ */
+.sidebar {
+  padding: 1rem 1.5rem;       /* 增加左右内边距，让内容不贴边 */
 }
