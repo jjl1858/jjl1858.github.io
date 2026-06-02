@@ -59,3 +59,11 @@
   .pub-title { font-size: 0.95rem; }
   .pub-authors, .pub-venue { font-size: 0.85rem; }
 }
+/* 修复侧边栏社交链接：图标与文字水平排列，不换行 */
+.author__urls.social-icons li a {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
