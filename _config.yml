@@ -57,10 +57,14 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+# 在 author 区块修改 bio 字段
 author:
-  name   : "庹忠曜 (Tuo Zhongyao)"
-  avatar : "/assets/images/avatar.jpg"     # 请将头像图片放在 /assets/images/ 目录下
-  bio    : "上海科技大学信息学院硕士生，专注具身智能与嵌入式系统研究。累计发表论文7篇，获国家级奖项3项。"
+  name: "庹忠曜 (Tuo Zhongyao)"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "中共党员，南京邮电大学智能科学与技术专业本科，综测排名1/62。保研至上海科技大学。累计已刊论文7篇（一作2篇），受理论文2篇，申请专利1项。获互联网+全国金奖等国家级奖项4项、省部级6项、校级荣誉17项。"
+  location: "中国 南京 / 上海"
+  email: "b21041426@njupt.edu.cn"
+  github: "ZhongyaoTuo"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -71,10 +75,6 @@ author:
     - label: "百度百科"
       icon: "fas fa-fw fa-globe"
       url: "https://baike.baidu.com/item/%E5%BA%B9%E5%BF%A0%E6%9B%9C/65136312"
-    # 如果有论文、专利或项目的 PDF 文件，可以将它们放在 /assets/pdf/ 目录下，并通过下方链接展示
-    # - label: "Google Scholar"
-    #   icon: "fas fa-fw fa-graduation-cap"
-    #   url: "https://scholar.google.com/..."
 
 footer:
   links:
