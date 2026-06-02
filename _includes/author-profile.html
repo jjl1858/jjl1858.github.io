@@ -1,35 +1,36 @@
+<!-- _includes/author-profile.html -->
 <div class="author__avatar" style="text-align: center;">
   {% if site.author.avatar %}
-    <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" style="display: inline-block; border-radius: 50%;">
+    <img src="{{ site.author.avatar | relative_url }}" alt="Avatar" style="display: inline-block; border-radius: 50%; width: 120px; height: 120px; object-fit: cover;">
   {% endif %}
 </div>
 
 <div class="author__content">
-  <h3 class="author__name" style="text-align: center; line-height: 1.3;">
+  <h3 class="author__name" style="text-align: center; line-height: 1.3; margin-bottom: 0.5rem;">
     庹忠曜<br>Zhongyao Tuo
   </h3>
   {% if site.author.bio %}
-    <div class="author__bio" itemprop="description" style="text-align: center;">
+    <div class="author__bio" style="text-align: center; margin: 0.75rem 0; line-height: 1.5;">
       {{ site.author.bio | markdownify }}
     </div>
   {% endif %}
 </div>
 
-<div class="author__urls-wrapper">
-  <ul class="author__urls social-icons" style="padding-left: 0; list-style: none;">
+<div class="author__urls-wrapper" style="text-align: center;">
+  <ul class="author__urls social-icons" style="padding-left: 0; list-style: none; margin-top: 1rem;">
     {% if site.author.location %}
-      <li style="margin-bottom: 0.5rem;">
+      <li style="margin-bottom: 0.75rem;">
         <i class="fas fa-fw fa-map-marker-alt"></i> {{ site.author.location }}
       </li>
     {% endif %}
     {% if site.author.email %}
-      <li style="margin-bottom: 0.5rem;">
+      <li style="margin-bottom: 0.75rem;">
         <i class="fas fa-fw fa-envelope-square"></i>
         <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
       </li>
     {% endif %}
     {% for link in site.author.links %}
-      <li style="margin-bottom: 0.5rem;">
+      <li style="margin-bottom: 0.75rem;">
         <i class="{{ link.icon | default: 'fas fa-link' }}"></i>
         <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
       </li>
