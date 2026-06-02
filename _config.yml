@@ -59,12 +59,11 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name: "庹忠曜<br>Zhongyao Tuo"          # 使用 <br> 换行
+  name: "庹忠曜"          # 可以保留，但不会被显示（因为被覆盖了）
   avatar: "/assets/images/avatar.jpg"
   bio: "中共党员，南京邮电大学智能科学与技术专业本科，专业排名1/62。保研至上海科技大学。累计参与发表论文8篇（一作2篇），申请专利1项。获互联网+全国金奖等国家级奖项4项、省部级6项、校级荣誉17项。"
   location: "中国 南京 / 上海"
   email: "b21041426@njupt.edu.cn"
-  # github 字段已删除，避免重复
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
