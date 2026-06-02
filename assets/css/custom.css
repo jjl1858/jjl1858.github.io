@@ -1,57 +1,61 @@
-/* 强制所有页面侧边栏头像居中 */
-.author__avatar {
-  text-align: center !important;
-}
-.author__avatar img {
-  display: inline-block !important;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-}
+/* ============================================
+   仅保留必要样式：侧边栏居中辅助 + 论文卡片
+   ============================================ */
 
-/* 侧边栏姓名、简介、链接统统居中 */
-.author__content,
-.author__urls-wrapper {
-  text-align: center !important;
+/* 辅助侧边栏内容居中（覆盖主题默认） */
+.author__avatar {
+  text-align: center;
 }
 .author__name {
-  text-align: center !important;
+  text-align: center;
 }
 .author__bio {
-  text-align: center !important;
+  text-align: center;
+}
+.author__urls-wrapper {
+  text-align: center;
 }
 .author__urls.social-icons {
-  padding-left: 0 !important;
-  text-align: center !important;
+  padding-left: 0;
 }
 .author__urls.social-icons li {
   display: block;
   margin-bottom: 0.75rem;
 }
 
-/* 强制所有页面（包括论文列表）侧边栏头像居中 */
-.page .author__avatar,
-.publications .author__avatar,
-.author__avatar {
-  text-align: center !important;
+/* 论文列表卡片样式 */
+.publication-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
 }
-.page .author__avatar img,
-.publications .author__avatar img,
-.author__avatar img {
-  display: inline-block !important;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+.pub-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.pub-authors {
+  font-style: italic;
+  color: #495057;
+  margin-bottom: 0.25rem;
+}
+.pub-venue {
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+.pub-note {
+  color: #28a745;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+.pub-links a {
+  margin-right: 1rem;
+  font-size: 0.85rem;
 }
 
-/* 同时强制论文页面侧边栏其他内容居中 */
-.page .author__content,
-.publications .author__content,
-.author__content,
-.page .author__urls-wrapper,
-.publications .author__urls-wrapper,
-.author__urls-wrapper {
-  text-align: center !important;
+/* 响应式 */
+@media (max-width: 768px) {
+  .pub-title { font-size: 0.95rem; }
+  .pub-authors, .pub-venue { font-size: 0.85rem; }
 }
