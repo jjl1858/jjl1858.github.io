@@ -1,11 +1,6 @@
-<div class="author__avatar">
+<div class="author__avatar" style="text-align: center;">
   {% if site.author.avatar %}
-    {% if site.author.avatar contains "://" %}
-      {% assign author_avatar = site.author.avatar %}
-    {% else %}
-      {% assign author_avatar = site.author.avatar | relative_url %}
-    {% endif %}
-    <img src="{{ author_avatar }}" alt="{{ site.author.name }}" itemprop="image">
+    <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" style="display: inline-block; border-radius: 50%;">
   {% endif %}
 </div>
 
@@ -14,43 +9,30 @@
     庹忠曜<br>Zhongyao Tuo
   </h3>
   {% if site.author.bio %}
-    <div class="author__bio" itemprop="description">
+    <div class="author__bio" itemprop="description" style="text-align: center;">
       {{ site.author.bio | markdownify }}
     </div>
   {% endif %}
 </div>
 
 <div class="author__urls-wrapper">
-  <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
-  <ul class="author__urls social-icons">
-    <!-- 地址 -->
+  <ul class="author__urls social-icons" style="padding-left: 0; list-style: none;">
     {% if site.author.location %}
-      <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-        <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ site.author.location }}</span>
+      <li style="margin-bottom: 0.5rem;">
+        <i class="fas fa-fw fa-map-marker-alt"></i> {{ site.author.location }}
       </li>
     {% endif %}
-
-    <!-- 邮箱 -->
     {% if site.author.email %}
-      <li>
-        <a href="mailto:{{ site.author.email }}">
-          <meta itemprop="email" content="{{ site.author.email }}" />
-          <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
-        </a>
+      <li style="margin-bottom: 0.5rem;">
+        <i class="fas fa-fw fa-envelope-square"></i>
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
       </li>
     {% endif %}
-
-    <!-- 自定义社交链接（来自 _config.yml 中的 author.links） -->
     {% for link in site.author.links %}
-      {% if link.label and link.url %}
-        <li>
-          <a href="{{ link.url }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
-            <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}
-          </a>
-        </li>
-      {% endif %}
+      <li style="margin-bottom: 0.5rem;">
+        <i class="{{ link.icon | default: 'fas fa-link' }}"></i>
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+      </li>
     {% endfor %}
-
-    <!-- 注意：不再重复显示 GitHub，因为已经通过 links 显示了 -->
   </ul>
 </div>
