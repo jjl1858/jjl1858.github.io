@@ -1,83 +1,76 @@
-/* ================================
-   1. 侧边栏作者姓名两行居中样式
-================================ */
+/* ============================================
+   庹忠曜个人主页自定义样式
+   包含：侧边栏头像居中、姓名两行、信息间距、正文字体、论文卡片等
+   ============================================ */
+
+/* ---------- 1. 侧边栏（作者区域）样式 ---------- */
+/* 头像容器居中 */
+.author__avatar {
+  text-align: center;
+}
+.author__avatar img {
+  display: inline-block;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+/* 作者姓名（两行）居中 */
 .author__name {
   text-align: center;
   line-height: 1.3;
   margin-bottom: 0.5rem;
 }
 
-/* 让 <br> 标签产生的换行稍微增加一点间距（可选） */
-.author__name br {
-  display: block;
-  content: "";
-  margin-top: 0.25rem;
-}
-
-/* ================================
-   2. 左侧侧边栏（个人信息区）样式调整
-   让内容区域更舒展，间距更大
-================================ */
-/* 作者姓名与头衔之间的间距 */
-.author__content .author__bio {
+/* 个人简介居中 */
+.author__bio {
+  text-align: center;
   margin: 0.75rem 0;
   line-height: 1.5;
 }
 
-/* 社交链接区块 */
+/* 社交链接区域整体居中、无列表样式 */
 .author__urls-wrapper {
+  text-align: center;
+}
+.author__urls.social-icons {
+  padding-left: 0;
+  list-style: none;
   margin-top: 1rem;
 }
-
-/* 每个社交链接项之间的垂直间距 */
 .author__urls.social-icons li {
+  display: block;
   margin-bottom: 0.75rem;
 }
-
-/* 链接图标和文字对齐，整体更舒展 */
 .author__urls.social-icons li a {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.25rem 0;
+  gap: 0.5rem;
 }
 
-/* ================================
-   3. 右侧正文区域字体调小
-   让整体阅读体验更舒适
-================================ */
+/* 地址、邮箱等非链接项样式 */
+.author__urls.social-icons li i {
+  width: 1.5rem;
+  text-align: center;
+}
+
+/* ---------- 2. 右侧正文区域字体大小 ---------- */
 .page__content {
-  font-size: 0.9rem;
+  font-size: 0.9rem;      /* 比默认略小，更精致 */
 }
-
-/* 文章标题可以保持稍微突出 */
 .page__content h2,
 .page__content h3 {
-  font-size: 1.15rem;
+  font-size: 1.15rem;     /* 标题适当缩小但仍醒目 */
 }
-
-/* 论文列表里的标题略微缩小 */
-.publication-item .pub-title {
-  font-size: 1rem;
-}
-
-/* 代码块、引用等也略小 */
 pre,
 code,
 blockquote {
   font-size: 0.85rem;
 }
 
-/* ================================
-   4. 可选：让左侧栏区块内边距更大
-================================ */
-.sidebar {
-  padding: 1rem 1.5rem;
-}
-
-/* ================================
-   5. 论文列表页自定义样式（与 publications.md 中的 HTML 配合）
-================================ */
+/* ---------- 3. 论文列表页卡片样式（与 publications.md 配合） ---------- */
 .publication-item {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #e9ecef;
@@ -103,20 +96,33 @@ blockquote {
   font-size: 0.85rem;
   margin-top: 0.25rem;
 }
+.pub-links {
+  margin-top: 0.5rem;
+}
 .pub-links a {
   margin-right: 1rem;
   font-size: 0.85rem;
 }
 
-/* 响应式调整 */
+/* ---------- 4. 侧边栏全局内边距（可选） ---------- */
+.sidebar {
+  padding: 1rem 1.5rem;
+}
+
+/* ---------- 5. 响应式：移动端调整 ---------- */
 @media (max-width: 768px) {
   .pub-title {
     font-size: 0.95rem;
   }
-  .pub-authors, .pub-venue {
+  .pub-authors,
+  .pub-venue {
     font-size: 0.85rem;
   }
   .sidebar {
     padding: 0.75rem 1rem;
+  }
+  .author__avatar img {
+    width: 100px;
+    height: 100px;
   }
 }
