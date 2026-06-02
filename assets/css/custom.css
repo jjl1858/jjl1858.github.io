@@ -1,29 +1,17 @@
 /* ============================================
-   仅保留必要样式：侧边栏居中辅助 + 论文卡片
+   辅助样式：确保侧边栏链接水平排列 + 论文卡片
    ============================================ */
 
-/* 辅助侧边栏内容居中（覆盖主题默认） */
-.author__avatar {
-  text-align: center;
-}
-.author__name {
-  text-align: center;
-}
-.author__bio {
-  text-align: center;
-}
-.author__urls-wrapper {
-  text-align: center;
-}
-.author__urls.social-icons {
-  padding-left: 0;
-}
-.author__urls.social-icons li {
-  display: block;
-  margin-bottom: 0.75rem;
+/* 强制所有社交链接图标与文字同行 */
+.author__urls.social-icons li a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  flex-direction: row !important;
+  white-space: nowrap;
 }
 
-/* 论文列表卡片样式 */
+/* 论文卡片样式（与之前一致） */
 .publication-item {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #e9ecef;
@@ -58,12 +46,4 @@
 @media (max-width: 768px) {
   .pub-title { font-size: 0.95rem; }
   .pub-authors, .pub-venue { font-size: 0.85rem; }
-}
-/* 修复侧边栏社交链接：图标与文字水平排列，不换行 */
-.author__urls.social-icons li a {
-  display: inline-flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 0.5rem;
-  white-space: nowrap;
 }
