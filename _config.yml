@@ -13,12 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 庹忠曜 | 具身智能探索者
+title: 贾金灵 | -----1
 description: >- # this means to ignore newlines until "baseurl:"
-  南京邮电大学优秀毕业生，以专业第一名保研至上海科技大学信息学院，
-  专注具身智能、嵌入式系统与机器人自主导航的交叉研究。
-  累计参与发表学术论文8篇（一作2篇），申请专利1项，
-  获第九届中国"互联网+"大学生创新创业大赛全国金奖等国家级奖项4项。
+  南京邮电大学毕业生，------2
 twitter_username: 
 github_username: 
 minimal_mistakes_skin: default
@@ -58,31 +55,21 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name: "庹忠曜"
+  name: "贾金灵"
   avatar: "/assets/images/avatar.jpg"
-  bio: "中共党员，南京邮电大学智能科学与技术专业本科，专业排名1/62。保研至上海科技大学。累计参与发表论文8篇（一作2篇），申请专利1项。获互联网+全国金奖等国家级奖项4项、省部级6项、校级荣誉17项。"
-  location: "中国 上海"
+  bio: "南京邮电大学智能科学与技术专业本科，专业排名12/62。-----3"
+  location: "江苏 苏州"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/ZhongyaoTuo"
-    - label: "OpenReview"
-      icon: "fas fa-fw fa-user-graduate"
-      url: "https://openreview.net/profile?id=~Zhongyao_Tuo1"
-    - label: "百度百科"
-      icon: "fas fa-fw fa-globe"
-      url: "https://baike.baidu.com/item/%E5%BA%B9%E5%BF%A0%E6%9B%9C/65136312"
+      url: "https://github.com/jjl1858"
+  
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/ZhongyaoTuo"
-    - label: "OpenReview"
-      icon: "fas fa-fw fa-user-graduate"
-      url: "https://openreview.net/profile?id=~Zhongyao_Tuo1"
-    - label: "百度百科"
-      icon: "fas fa-fw fa-globe"
-      url: "https://baike.baidu.com/item/%E5%BA%B9%E5%BF%A0%E6%9B%9C/65136312"
+      url: "https://github.com/jjl1858"
+
 
 defaults:
   # _posts
